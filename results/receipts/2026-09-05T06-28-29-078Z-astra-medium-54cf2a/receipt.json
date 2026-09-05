@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-05T06-28-29-078Z-astra-medium-54cf2a",
+  "case": "abort-delay",
+  "startedAt": "2026-09-05T06:28:29.111Z",
+  "finishedAt": "2026-09-05T06:30:10.538Z",
+  "requestedModel": "gpt-6-astra",
+  "observedModel": null,
+  "effort": "medium",
+  "status": "completed",
+  "elapsedSeconds": 101.371,
+  "usage": {
+    "input_tokens": 103401,
+    "cached_input_tokens": 93056,
+    "output_tokens": 2284
+  },
+  "verification": {
+    "passed": 7,
+    "total": 7,
+    "checks": [
+      {
+        "name": "abort in input schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "abort in onFailedAttempt schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "abort in shouldConsumeRetry schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "abort in shouldRetry schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "ordinary retries keep their backoff and metadata",
+        "passed": true
+      },
+      {
+        "name": "aborting an active delay cancels it and removes its listener",
+        "passed": true
+      },
+      {
+        "name": "shouldRetry=false preserves the attempt error",
+        "passed": true
+      }
+    ]
+  },
+  "harness": {
+    "codex": "codex-cli 0.153.0",
+    "node": "v22.23.2",
+    "platform": "darwin",
+    "arch": "arm64",
+    "timeoutSeconds": 180,
+    "ignoreUserConfig": true
+  },
+  "source": {
+    "issue": "https://github.com/sindresorhus/p-retry/issues/97",
+    "baseCommit": "6ac326b188834f4af5a54cedc114f67f0f510613",
+    "sha256": "4929565e1e08b5ee9441e81615b332302d599eca1405c4fd84e35001dd64a5f6"
+  },
+  "promptSha256": "66d8675e4691c08f7471af5a9efa8d154b6b2c1ab2e7956a1f826ce8baf52730",
+  "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
+  "candidateSha256": "eb55f48812ab876fd09f4caf4febb5c5b1217df34420f7636118ffefb26575e4",
+  "patchSha256": "b4bf028fa4fc3a9f603d5fd00dc755b79c4edc0e5dc14877a2eaa8f36c4416c3"
+}

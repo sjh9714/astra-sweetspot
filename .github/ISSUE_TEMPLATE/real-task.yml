@@ -1,0 +1,25 @@
+name: Suggest a real task
+description: A task where you want to know whether Astra or a different effort helps.
+title: "Task: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to finish?
+      description: Describe the actual workflow and what your current model or setting gets wrong.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Public starting code or issue
+      description: Link to code you have permission to share. Do not include private repositories or secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: How should we check success?
+      description: A test command, expected output, or a concrete acceptance criterion.
+    validations:
+      required: true

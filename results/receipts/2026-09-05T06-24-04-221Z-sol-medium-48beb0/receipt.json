@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-05T06-24-04-221Z-sol-medium-48beb0",
+  "case": "abort-delay",
+  "startedAt": "2026-09-05T06:24:04.288Z",
+  "requestedModel": "gpt-5.6-sol",
+  "observedModel": null,
+  "effort": "medium",
+  "status": "completed",
+  "elapsedSeconds": 130.79,
+  "usage": {
+    "input_tokens": 124035,
+    "cached_input_tokens": 106368,
+    "output_tokens": 4774
+  },
+  "verification": {
+    "passed": 7,
+    "total": 7,
+    "checks": [
+      {
+        "name": "abort in input schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "abort in onFailedAttempt schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "abort in shouldConsumeRetry schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "abort in shouldRetry schedules no backoff",
+        "passed": true
+      },
+      {
+        "name": "ordinary retries keep their backoff and metadata",
+        "passed": true
+      },
+      {
+        "name": "aborting an active delay cancels it and removes its listener",
+        "passed": true
+      },
+      {
+        "name": "shouldRetry=false preserves the attempt error",
+        "passed": true
+      }
+    ]
+  },
+  "harness": {
+    "codex": "codex-cli 0.153.0",
+    "node": "v22.23.2",
+    "platform": "darwin",
+    "arch": "arm64",
+    "timeoutSeconds": 180,
+    "ignoreUserConfig": true
+  },
+  "source": {
+    "issue": "https://github.com/sindresorhus/p-retry/issues/97",
+    "baseCommit": "6ac326b188834f4af5a54cedc114f67f0f510613",
+    "sha256": "4929565e1e08b5ee9441e81615b332302d599eca1405c4fd84e35001dd64a5f6"
+  },
+  "promptSha256": "66d8675e4691c08f7471af5a9efa8d154b6b2c1ab2e7956a1f826ce8baf52730",
+  "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
+  "candidateSha256": "1359fac6b959cb65b31967e67b0522d81f7e79959e15f171623d65fb92949fc7",
+  "patchSha256": "a3ae0fe5a53c1ca040bb092fbfc7c832490e35d30419c370f1fe2618ab69b330",
+  "measurementNote": "The initial runner recorded milliseconds under elapsedSeconds; corrected by dividing by 1000 before publication. The trial was not rerun."
+}

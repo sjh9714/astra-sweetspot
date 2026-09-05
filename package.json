@@ -1,0 +1,15 @@
+{
+  "name": "astra-sweetspot",
+  "version": "0.1.0",
+  "description": "Astra vs Sol on real bugs: inspect the receipts, then reproduce one run with Codex.",
+  "type": "module",
+  "bin": { "astra-sweetspot": "bin/astra-sweetspot.mjs" },
+  "scripts": { "test": "node --test test/grader.test.mjs test/runner.test.mjs", "site": "node scripts/build-site.mjs" },
+  "engines": { "node": ">=20" },
+  "files": ["bin", "src", "fixtures", "graders", "results", "docs/METHODOLOGY.md", "LICENSE", "THIRD_PARTY.md"],
+  "repository": { "type": "git", "url": "git+https://github.com/sjh9714/astra-sweetspot.git" },
+  "homepage": "https://sjh9714.github.io/astra-sweetspot/",
+  "bugs": { "url": "https://github.com/sjh9714/astra-sweetspot/issues" },
+  "keywords": ["astra", "gpt-6", "codex", "benchmark", "reasoning", "sol"],
+  "license": "MIT"
+}

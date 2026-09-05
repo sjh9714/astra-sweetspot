@@ -1,0 +1,82 @@
+diff --git a/index.js b/index.js
+index ca06cfb..fd456f8 100644
+--- a/index.js
++++ b/index.js
+@@ -67,6 +67,31 @@ function calculateRemainingTime(start, max) {
+ 	return max - (performance.now() - start);
+ }
+ 
++async function runWithSignal(callback, signal) {
++	signal?.throwIfAborted();
++
++	if (!signal) {
++		return callback();
++	}
++
++	let onAbort;
++
++	try {
++		return await new Promise((resolve, reject) => {
++			onAbort = () => reject(signal.reason);
++			signal.addEventListener('abort', onAbort, {once: true});
++
++			// Keep observing the callback even if cancellation settles first.
++			Promise.resolve(callback()).then(resolve, reject);
++		});
++	} catch (error) {
++		signal.throwIfAborted();
++		throw error;
++	} finally {
++		signal.removeEventListener('abort', onAbort);
++	}
++}
++
+ async function onAttemptFailure({error, attemptNumber, retriesConsumed, startTime, options}) {
+ 	const normalizedError = error instanceof Error
+ 		? error
+@@ -89,13 +114,15 @@ async function onAttemptFailure({error, attemptNumber, retriesConsumed, startTim
+ 		retriesConsumed,
+ 	});
+ 
+-	await options.onFailedAttempt(context);
++	await runWithSignal(() => options.onFailedAttempt(context), options.signal);
++	options.signal?.throwIfAborted();
+ 
+ 	if (calculateRemainingTime(startTime, maxRetryTime) <= 0) {
+ 		throw normalizedError;
+ 	}
+ 
+-	const consumeRetry = await options.shouldConsumeRetry(context);
++	const consumeRetry = await runWithSignal(() => options.shouldConsumeRetry(context), options.signal);
++	options.signal?.throwIfAborted();
+ 
+ 	const remainingTime = calculateRemainingTime(startTime, maxRetryTime);
+ 
+@@ -112,7 +139,10 @@ async function onAttemptFailure({error, attemptNumber, retriesConsumed, startTim
+ 		return false;
+ 	}
+ 
+-	if (!await options.shouldRetry(context)) {
++	const shouldRetry = await runWithSignal(() => options.shouldRetry(context), options.signal);
++	options.signal?.throwIfAborted();
++
++	if (!shouldRetry) {
+ 		throw normalizedError;
+ 	}
+ 
+@@ -192,12 +222,14 @@ export default async function pRetry(input, options = {}) {
+ 		try {
+ 			options.signal?.throwIfAborted();
+ 
+-			const result = await input(attemptNumber);
++			const result = await runWithSignal(() => input(attemptNumber), options.signal);
+ 
+ 			options.signal?.throwIfAborted();
+ 
+ 			return result;
+ 		} catch (error) {
++			options.signal?.throwIfAborted();
++
+ 			if (await onAttemptFailure({
+ 				error,
+ 				attemptNumber,

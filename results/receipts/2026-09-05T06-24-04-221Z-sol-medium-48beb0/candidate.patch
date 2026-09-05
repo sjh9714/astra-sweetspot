@@ -1,0 +1,99 @@
+diff --git a/index.js b/index.js
+index ca06cfb..67b02df 100644
+--- a/index.js
++++ b/index.js
+@@ -67,6 +67,44 @@ function calculateRemainingTime(start, max) {
+ 	return max - (performance.now() - start);
+ }
+ 
++async function callWithSignal(function_, signal) {
++	signal?.throwIfAborted();
++
++	if (!signal) {
++		return function_();
++	}
++
++	return new Promise((resolve, reject) => {
++		const onAbort = () => {
++			signal.removeEventListener('abort', onAbort);
++			reject(signal.reason);
++		};
++
++		signal.addEventListener('abort', onAbort, {once: true});
++
++		let result;
++		try {
++			result = function_();
++		} catch (error) {
++			signal.removeEventListener('abort', onAbort);
++			reject(error);
++			return;
++		}
++
++		Promise.resolve(result)
++			.then(
++				value => {
++					signal.removeEventListener('abort', onAbort);
++					resolve(value);
++				},
++				error => {
++					signal.removeEventListener('abort', onAbort);
++					reject(error);
++				},
++			);
++	});
++}
++
+ async function onAttemptFailure({error, attemptNumber, retriesConsumed, startTime, options}) {
+ 	const normalizedError = error instanceof Error
+ 		? error
+@@ -89,13 +127,13 @@ async function onAttemptFailure({error, attemptNumber, retriesConsumed, startTim
+ 		retriesConsumed,
+ 	});
+ 
+-	await options.onFailedAttempt(context);
++	await callWithSignal(() => options.onFailedAttempt(context), options.signal);
+ 
+ 	if (calculateRemainingTime(startTime, maxRetryTime) <= 0) {
+ 		throw normalizedError;
+ 	}
+ 
+-	const consumeRetry = await options.shouldConsumeRetry(context);
++	const consumeRetry = await callWithSignal(() => options.shouldConsumeRetry(context), options.signal);
+ 
+ 	const remainingTime = calculateRemainingTime(startTime, maxRetryTime);
+ 
+@@ -112,7 +150,7 @@ async function onAttemptFailure({error, attemptNumber, retriesConsumed, startTim
+ 		return false;
+ 	}
+ 
+-	if (!await options.shouldRetry(context)) {
++	if (!await callWithSignal(() => options.shouldRetry(context), options.signal)) {
+ 		throw normalizedError;
+ 	}
+ 
+@@ -125,6 +163,8 @@ async function onAttemptFailure({error, attemptNumber, retriesConsumed, startTim
+ 	const finalDelay = Math.min(delayTime, remainingTime);
+ 
+ 	if (finalDelay > 0) {
++		options.signal?.throwIfAborted();
++
+ 		await new Promise((resolve, reject) => {
+ 			const onAbort = () => {
+ 				clearTimeout(timeoutToken);
+@@ -192,12 +232,14 @@ export default async function pRetry(input, options = {}) {
+ 		try {
+ 			options.signal?.throwIfAborted();
+ 
+-			const result = await input(attemptNumber);
++			const result = await callWithSignal(() => input(attemptNumber), options.signal);
+ 
+ 			options.signal?.throwIfAborted();
+ 
+ 			return result;
+ 		} catch (error) {
++			options.signal?.throwIfAborted();
++
+ 			if (await onAttemptFailure({
+ 				error,
+ 				attemptNumber,
