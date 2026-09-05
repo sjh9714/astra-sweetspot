@@ -1,0 +1,84 @@
+diff --git a/index.js b/index.js
+index d59f106..f17a0ff 100644
+--- a/index.js
++++ b/index.js
+@@ -49,47 +49,67 @@ export default async function pRetry(input, options) {
+ 		};
+ 
+ 		const operation = retry.operation(options);
++		const signal = options.signal;
++		let abortHandler;
++		let isSettled = false;
++		const cleanup = () => {
++			if (abortHandler) {
++				signal.removeEventListener('abort', abortHandler);
++				abortHandler = undefined;
++			}
++		};
++		const resolveWithCleanup = value => {
++			isSettled = true;
++			cleanup();
++			resolve(value);
++		};
++		const rejectWithCleanup = error => {
++			isSettled = true;
++			cleanup();
++			reject(error);
++		};
+ 
+ 		operation.attempt(async attemptNumber => {
+ 			try {
+-				resolve(await input(attemptNumber));
++				resolveWithCleanup(await input(attemptNumber));
+ 			} catch (error) {
+ 				if (!(error instanceof Error)) {
+-					reject(new TypeError(`Non-error was thrown: "${error}". You should only throw errors.`));
++					rejectWithCleanup(new TypeError(`Non-error was thrown: "${error}". You should only throw errors.`));
+ 					return;
+ 				}
+ 
+ 				if (error instanceof AbortError) {
+ 					operation.stop();
+-					reject(error.originalError);
++					rejectWithCleanup(error.originalError);
+ 				} else if (error instanceof TypeError && !isNetworkError(error.message)) {
+ 					operation.stop();
+-					reject(error);
++					rejectWithCleanup(error);
+ 				} else {
+ 					decorateErrorWithCounts(error, attemptNumber, options);
+ 
+ 					try {
+ 						await options.onFailedAttempt(error);
+ 					} catch (error) {
+-						reject(error);
++						rejectWithCleanup(error);
+ 						return;
+ 					}
+ 
+ 					if (!operation.retry(error)) {
+-						reject(operation.mainError());
++						rejectWithCleanup(operation.mainError());
+ 					}
+ 				}
+ 			}
+ 		});
+ 
+-		if (options.signal && !options.signal.aborted) {
+-			options.signal.addEventListener('abort', () => {
++		if (signal && !signal.aborted && !isSettled) {
++			abortHandler = () => {
+ 				operation.stop();
+-				const reason = options.signal.reason === undefined
++				const reason = signal.reason === undefined
+ 					? getDOMException('The operation was aborted.')
+-					: options.signal.reason;
+-				reject(reason instanceof Error ? reason : getDOMException(reason));
+-			}, {
++					: signal.reason;
++				rejectWithCleanup(reason instanceof Error ? reason : getDOMException(reason));
++			};
++			signal.addEventListener('abort', abortHandler, {
+ 				once: true,
+ 			});
+ 		}

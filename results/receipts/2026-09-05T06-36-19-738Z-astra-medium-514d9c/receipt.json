@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-05T06-36-19-738Z-astra-medium-514d9c",
+  "case": "abort-cleanup",
+  "startedAt": "2026-09-05T06:36:19.772Z",
+  "finishedAt": "2026-09-05T06:37:37.091Z",
+  "requestedModel": "gpt-6-astra",
+  "observedModel": null,
+  "effort": "medium",
+  "status": "completed",
+  "elapsedSeconds": 77.262,
+  "usage": {
+    "input_tokens": 83126,
+    "cached_input_tokens": 62208,
+    "output_tokens": 1536
+  },
+  "verification": {
+    "passed": 8,
+    "total": 8,
+    "checks": [
+      {
+        "name": "cleans up after success, preserving unrelated listeners",
+        "passed": true
+      },
+      {
+        "name": "cleans up after success after retry, preserving unrelated listeners",
+        "passed": true
+      },
+      {
+        "name": "cleans up after exhausted, preserving unrelated listeners",
+        "passed": true
+      },
+      {
+        "name": "cleans up after AbortError, preserving unrelated listeners",
+        "passed": true
+      },
+      {
+        "name": "cleans up after TypeError, preserving unrelated listeners",
+        "passed": true
+      },
+      {
+        "name": "cleans up after hook throws, preserving unrelated listeners",
+        "passed": true
+      },
+      {
+        "name": "cleans up after non-error, preserving unrelated listeners",
+        "passed": true
+      },
+      {
+        "name": "cancels an in-flight retry with the supplied error",
+        "passed": true
+      }
+    ]
+  },
+  "harness": {
+    "codex": "codex-cli 0.153.0",
+    "node": "v22.23.2",
+    "platform": "darwin",
+    "arch": "arm64",
+    "timeoutSeconds": 180,
+    "ignoreUserConfig": true
+  },
+  "source": {
+    "issue": "https://github.com/sindresorhus/p-retry/issues/71",
+    "baseCommit": "285fdc3f890a6f3d199b3d4abb0bad7c172c2233",
+    "sha256": "b3b4639112188e9aef794946e851ae8fd6615a6c265ac638c746b539b7ac1ae0"
+  },
+  "promptSha256": "d3643d679e4b16c9f8a3d9d1648f8731dc92c7f8c1e5bfddd8a20d4024e61530",
+  "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
+  "candidateSha256": "8cdfd4450f69a0429cacec02e8a01331de0684e9fd469b36d3db4171f6b67afb",
+  "patchSha256": "cf44e9c9bace32f483b105e23ac58aafe3615cf3c51eee2a19ab42678650ae0b"
+}

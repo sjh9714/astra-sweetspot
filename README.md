@@ -15,7 +15,7 @@ That command shows bundled results. It makes **no model call** and needs no API 
 ## Launch-day pilot
 
 <!-- RESULTS:START -->
-**4/8 planned runs published.** Remaining conditions are still running. No completed attempt is omitted.
+**All 8 runs passed their focused regression checks.** On these two tasks, higher Astra effort took more time with the same check score. This does not establish comparative reliability or a universal best effort.
 
 | Task | Model / effort | Checks | Seconds | Input | Cached subset | Output |
 |---|---|---:|---:|---:|---:|---:|
@@ -23,6 +23,10 @@ That command shows bundled results. It makes **no model call** and needs no API 
 | [abort-delay](results/receipts/2026-09-05T06-27-10-716Z-astra-low-432933) | Astra low | 7/7 | 78.2 | 73,820 | 64,256 | 1,822 |
 | [abort-delay](results/receipts/2026-09-05T06-28-29-078Z-astra-medium-54cf2a) | Astra medium | 7/7 | 101.4 | 103,401 | 93,056 | 2,284 |
 | [abort-delay](results/receipts/2026-09-05T06-30-10-623Z-astra-high-b8bcf8) | Astra high | 7/7 | 163.0 | 127,331 | 113,280 | 3,865 |
+| [abort-cleanup](results/receipts/2026-09-05T06-32-53-812Z-sol-medium-fff3ad) | Sol medium | 8/8 | 129.4 | 104,643 | 69,120 | 5,425 |
+| [abort-cleanup](results/receipts/2026-09-05T06-35-03-397Z-astra-low-73f206) | Astra low | 8/8 | 76.2 | 83,831 | 74,624 | 1,501 |
+| [abort-cleanup](results/receipts/2026-09-05T06-36-19-738Z-astra-medium-514d9c) | Astra medium | 8/8 | 77.3 | 83,126 | 62,208 | 1,536 |
+| [abort-cleanup](results/receipts/2026-09-05T06-37-37-177Z-astra-high-5ea5ae) | Astra high | 8/8 | 123.2 | 102,322 | 91,520 | 2,920 |
 <!-- RESULTS:END -->
 
 Two historical [p-retry bugs](docs/METHODOLOGY.md#tasks-and-grading), four model/effort settings, **one attempt per condition**. Same starting source and prompt within each task. Both are small tasks from one library and may be in training data. This is not a held-out benchmark or a model leaderboard.

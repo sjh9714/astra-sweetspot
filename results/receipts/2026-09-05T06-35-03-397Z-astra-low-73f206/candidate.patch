@@ -1,0 +1,36 @@
+diff --git a/index.js b/index.js
+index d59f106..21491c6 100644
+--- a/index.js
++++ b/index.js
+@@ -41,6 +41,8 @@ const getDOMException = errorMessage => globalThis.DOMException === undefined
+ 	: new DOMException(errorMessage);
+ 
+ export default async function pRetry(input, options) {
++	let abortHandler;
++
+ 	return new Promise((resolve, reject) => {
+ 		options = {
+ 			onFailedAttempt() {},
+@@ -83,15 +85,20 @@ export default async function pRetry(input, options) {
+ 		});
+ 
+ 		if (options.signal && !options.signal.aborted) {
+-			options.signal.addEventListener('abort', () => {
++			abortHandler = () => {
+ 				operation.stop();
+ 				const reason = options.signal.reason === undefined
+ 					? getDOMException('The operation was aborted.')
+ 					: options.signal.reason;
+ 				reject(reason instanceof Error ? reason : getDOMException(reason));
+-			}, {
++			};
++			options.signal.addEventListener('abort', abortHandler, {
+ 				once: true,
+ 			});
+ 		}
++	}).finally(() => {
++		if (abortHandler) {
++			options.signal.removeEventListener('abort', abortHandler);
++		}
+ 	});
+ }
