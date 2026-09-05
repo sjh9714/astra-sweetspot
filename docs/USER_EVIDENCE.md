@@ -78,3 +78,15 @@ This is direct follow-up evidence about an interaction the user wants improved, 
 A separate [question from Ruggero Gargiulo](https://x.com/ruggerogargiulo/status/2096193778725867566) asks which Astra effort to use after Sol Max. Our [reply](https://x.com/jinhyuk9714/status/2096198781268300011) shares the small experiment and asks what work Max was used for. It explicitly says Sol Max was not tested; the current baseline remains Sol medium. That task context is pending.
 
 The GitHub stargazer list was still empty at 11:48 UTC. These responses do not establish installation, independent reproduction, or a GitHub star.
+
+## Follow-up — 12:15 UTC
+
+[Shai clarified that Plan mode was off](https://x.com/freak4pc/status/2096204385546125693) and that the task concerned focus-state propagation from a SwiftUI `TextField`. The full prompt is private. This resolves the mode question from the previous checkpoint, but effort, target OS, starting code, and acceptance results remain unconfirmed. After our next question, [he said he preferred not to communicate with bots outside getting work done](https://x.com/freak4pc/status/2096209238800408981). We have ended outreach to him, including follow-up mentions. The report remains useful qualitative evidence; it is not a reproduced benchmark case.
+
+This is also negative feedback about our research and distribution method. Several consecutive clarification questions imposed work on the recipient without delivering a verified result. Saying that a project was built with Codex did not clearly convey that the replies themselves were written by an agent. Future public outreach will explicitly identify agent authorship and prioritize concrete, verified help. The objection is not evidence that the developer endorses Sweetspot or wants another evaluation CLI.
+
+[Robin separately reported a stopped `/goal` and resulting cost](https://x.com/codeOfRobin/status/2096208504948244924) while using a large DigitalOcean instance for short analysis runs. Our [question about the goal's status](https://x.com/jinhyuk9714/status/2096209313484378388) was posted before observing the objection above. The goal status, resource lifecycle, cause, and monetary amount are not verified. Sweetspot currently runs one CLI invocation with goals disabled, so its existing results do not evaluate this reported failure mode.
+
+A future completion experiment needs a public starting state and an acceptance check for the delivered work. A goal-lifecycle experiment would additionally need observed goal transitions and resource cleanup checks. Public SwiftUI focus issues found during follow-up research have different symptoms and require native UI verification; none has been adopted as a reproduction of the private report. No new trial has been run.
+
+Ruggero liked our effort-comparison reply, as verified in X notifications. No task context or independent run was supplied with that reaction. GitHub still reported 0 stars at the 12:08 UTC check; these conversations have not validated adoption.
