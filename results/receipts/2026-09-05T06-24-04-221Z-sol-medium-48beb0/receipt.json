@@ -11,7 +11,9 @@
   "usage": {
     "input_tokens": 124035,
     "cached_input_tokens": 106368,
-    "output_tokens": 4774
+    "output_tokens": 4774,
+    "cache_write_input_tokens": 0,
+    "reasoning_output_tokens": 2278
   },
   "verification": {
     "passed": 7,
@@ -64,5 +66,15 @@
   "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
   "candidateSha256": "1359fac6b959cb65b31967e67b0522d81f7e79959e15f171623d65fb92949fc7",
   "patchSha256": "a3ae0fe5a53c1ca040bb092fbfc7c832490e35d30419c370f1fe2618ab69b330",
-  "measurementNote": "The initial runner recorded milliseconds under elapsedSeconds; corrected by dividing by 1000 before publication. The trial was not rerun."
+  "measurementNote": "The initial runner recorded milliseconds under elapsedSeconds; corrected by dividing by 1000 before publication. The trial was not rerun.",
+  "usageSupplement": {
+    "recoveredAt": "2026-09-05T09:48:39+00:00",
+    "eventFile": "usage-event.json",
+    "eventSha256": "6e6287205f9668bdc319fc0830057cef0f552f4a1b88dbf7b91c8d36c7b181ee",
+    "recoveredFields": [
+      "cache_write_input_tokens",
+      "reasoning_output_tokens"
+    ],
+    "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+  }
 }

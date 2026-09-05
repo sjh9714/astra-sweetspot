@@ -18,7 +18,7 @@ export function collectEvent(event, state) {
   if (event.type === 'turn.failed' || event.type === 'error') state.failed = true;
   if (event.type !== 'turn.completed') return;
   state.completed = true;
-  for (const name of ['input_tokens', 'cached_input_tokens', 'output_tokens']) {
+  for (const name of ['input_tokens', 'cached_input_tokens', 'cache_write_input_tokens', 'output_tokens', 'reasoning_output_tokens']) {
     const value = event.usage?.[name];
     if (Number.isSafeInteger(value) && value >= 0) state.usage[name] = (state.usage[name] ?? 0) + value;
   }
@@ -66,7 +66,7 @@ export async function runTrial({id, model, effort, timeout = 180}) {
     '-c', 'project_doc_max_bytes=0', '-c', 'web_search="disabled"',
     '--disable', 'multi_agent', '--disable', 'goals', '--disable', 'apps', '--disable', 'memories', '--disable', 'hooks',
     '--output-last-message', join(directory, 'last-message.txt'), '-'];
-  const state = {usage: {input_tokens: null, cached_input_tokens: null, output_tokens: null}, observedModel: null, failed: false, completed: false};
+  const state = {usage: {input_tokens: null, cached_input_tokens: null, cache_write_input_tokens: null, output_tokens: null, reasoning_output_tokens: null}, observedModel: null, failed: false, completed: false};
   const raw = createWriteStream(join(directory, 'events.private.jsonl'), {mode: 0o600});
   const stderr = createWriteStream(join(directory, 'stderr.private.log'), {mode: 0o600});
   const startedAt = new Date().toISOString();

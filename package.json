@@ -1,6 +1,6 @@
 {
   "name": "astra-sweetspot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Astra vs Sol on real bugs: inspect the receipts, then reproduce one run with Codex.",
   "type": "module",
   "bin": { "astra-sweetspot": "bin/astra-sweetspot.mjs" },

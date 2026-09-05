@@ -16,7 +16,9 @@
       "usage": {
         "input_tokens": 124035,
         "cached_input_tokens": 106368,
-        "output_tokens": 4774
+        "output_tokens": 4774,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 2278
       },
       "verification": {
         "passed": 7,
@@ -69,7 +71,17 @@
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "1359fac6b959cb65b31967e67b0522d81f7e79959e15f171623d65fb92949fc7",
       "patchSha256": "a3ae0fe5a53c1ca040bb092fbfc7c832490e35d30419c370f1fe2618ab69b330",
-      "measurementNote": "The initial runner recorded milliseconds under elapsedSeconds; corrected by dividing by 1000 before publication. The trial was not rerun."
+      "measurementNote": "The initial runner recorded milliseconds under elapsedSeconds; corrected by dividing by 1000 before publication. The trial was not rerun.",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "6e6287205f9668bdc319fc0830057cef0f552f4a1b88dbf7b91c8d36c7b181ee",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     },
     {
       "schemaVersion": 1,
@@ -85,7 +97,9 @@
       "usage": {
         "input_tokens": 73820,
         "cached_input_tokens": 64256,
-        "output_tokens": 1822
+        "output_tokens": 1822,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 326
       },
       "verification": {
         "passed": 7,
@@ -137,7 +151,17 @@
       "promptSha256": "66d8675e4691c08f7471af5a9efa8d154b6b2c1ab2e7956a1f826ce8baf52730",
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "2805291fad3bd9c1c1269913e93844bb62d59d741fa1d5de13d5975ee79679ed",
-      "patchSha256": "9244a714d75885376996fff58605ee41aa4b37b0869ab0b4bdc0a7b620fc106b"
+      "patchSha256": "9244a714d75885376996fff58605ee41aa4b37b0869ab0b4bdc0a7b620fc106b",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "04fdb4329ad89a21529dadb7e059cb55ef9e93a41d58ee94598e267ca8665039",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     },
     {
       "schemaVersion": 1,
@@ -153,7 +177,9 @@
       "usage": {
         "input_tokens": 103401,
         "cached_input_tokens": 93056,
-        "output_tokens": 2284
+        "output_tokens": 2284,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 448
       },
       "verification": {
         "passed": 7,
@@ -205,7 +231,17 @@
       "promptSha256": "66d8675e4691c08f7471af5a9efa8d154b6b2c1ab2e7956a1f826ce8baf52730",
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "eb55f48812ab876fd09f4caf4febb5c5b1217df34420f7636118ffefb26575e4",
-      "patchSha256": "b4bf028fa4fc3a9f603d5fd00dc755b79c4edc0e5dc14877a2eaa8f36c4416c3"
+      "patchSha256": "b4bf028fa4fc3a9f603d5fd00dc755b79c4edc0e5dc14877a2eaa8f36c4416c3",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "c7660bad4dbdc60d43bef0e4d12c192b53577d02d1680c5549c5809cbb6b260d",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     },
     {
       "schemaVersion": 1,
@@ -221,7 +257,9 @@
       "usage": {
         "input_tokens": 127331,
         "cached_input_tokens": 113280,
-        "output_tokens": 3865
+        "output_tokens": 3865,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 1210
       },
       "verification": {
         "passed": 7,
@@ -273,7 +311,17 @@
       "promptSha256": "66d8675e4691c08f7471af5a9efa8d154b6b2c1ab2e7956a1f826ce8baf52730",
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "241029f0bf8f9c819ae29c470158f8aecc9b09b2ff243b272c2750efe21229ba",
-      "patchSha256": "1792aab54c9fa2435c1b5c0ae72d6e05db4663d9be78aee82dcc639ac40cb2d7"
+      "patchSha256": "1792aab54c9fa2435c1b5c0ae72d6e05db4663d9be78aee82dcc639ac40cb2d7",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "cfd094404218e66bf2566f49345f676a90bf96a5ff85341548850ada8bed39ee",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     },
     {
       "schemaVersion": 1,
@@ -289,7 +337,9 @@
       "usage": {
         "input_tokens": 104643,
         "cached_input_tokens": 69120,
-        "output_tokens": 5425
+        "output_tokens": 5425,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 1924
       },
       "verification": {
         "passed": 8,
@@ -345,7 +395,17 @@
       "promptSha256": "d3643d679e4b16c9f8a3d9d1648f8731dc92c7f8c1e5bfddd8a20d4024e61530",
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "c6c673641f8dc4255b0af25ff518604560052c1873b87ae8c11fac9b97de1dff",
-      "patchSha256": "6700647c0c953dac6c3417907b2bb1733ffe62f89589eaebf71e3175acaa03a2"
+      "patchSha256": "6700647c0c953dac6c3417907b2bb1733ffe62f89589eaebf71e3175acaa03a2",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "1c7500cb5649b7a81c60c189c636ced3e8d75f8cef777a700e7c7a97052646ea",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     },
     {
       "schemaVersion": 1,
@@ -361,7 +421,9 @@
       "usage": {
         "input_tokens": 83831,
         "cached_input_tokens": 74624,
-        "output_tokens": 1501
+        "output_tokens": 1501,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 135
       },
       "verification": {
         "passed": 8,
@@ -417,7 +479,17 @@
       "promptSha256": "d3643d679e4b16c9f8a3d9d1648f8731dc92c7f8c1e5bfddd8a20d4024e61530",
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "b95cef8a302242a874337b78235f454b8aa49f74c29a4909db95cf8609e03321",
-      "patchSha256": "d70fbb61f0e36400b278cb8aad24bd4a628a697b2a9f89bee51d1176a56d249c"
+      "patchSha256": "d70fbb61f0e36400b278cb8aad24bd4a628a697b2a9f89bee51d1176a56d249c",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "691882013088777f52144f050bd55a1c840fc2a62f1901f5d9e623f257df59d4",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     },
     {
       "schemaVersion": 1,
@@ -433,7 +505,9 @@
       "usage": {
         "input_tokens": 83126,
         "cached_input_tokens": 62208,
-        "output_tokens": 1536
+        "output_tokens": 1536,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 208
       },
       "verification": {
         "passed": 8,
@@ -489,7 +563,17 @@
       "promptSha256": "d3643d679e4b16c9f8a3d9d1648f8731dc92c7f8c1e5bfddd8a20d4024e61530",
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "8cdfd4450f69a0429cacec02e8a01331de0684e9fd469b36d3db4171f6b67afb",
-      "patchSha256": "cf44e9c9bace32f483b105e23ac58aafe3615cf3c51eee2a19ab42678650ae0b"
+      "patchSha256": "cf44e9c9bace32f483b105e23ac58aafe3615cf3c51eee2a19ab42678650ae0b",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "38493e810af9c794083a133878abb868357be9e2104b15b0572f0ca01fba0f5d",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     },
     {
       "schemaVersion": 1,
@@ -505,7 +589,9 @@
       "usage": {
         "input_tokens": 102322,
         "cached_input_tokens": 91520,
-        "output_tokens": 2920
+        "output_tokens": 2920,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 410
       },
       "verification": {
         "passed": 8,
@@ -561,7 +647,17 @@
       "promptSha256": "d3643d679e4b16c9f8a3d9d1648f8731dc92c7f8c1e5bfddd8a20d4024e61530",
       "graderSha256": "4bcae33f726efe195824a7612074e7cd6675d9d9bdb5cc9787666fbeea2c9044",
       "candidateSha256": "c28962973a3a20fa86294ded6425bd6bf1e4614b2810ea269c76c428cdf50ef9",
-      "patchSha256": "651909843439b99267fe0afb9b18eaec13f1310898a5d081528b12d20ea2c28e"
+      "patchSha256": "651909843439b99267fe0afb9b18eaec13f1310898a5d081528b12d20ea2c28e",
+      "usageSupplement": {
+        "recoveredAt": "2026-09-05T09:48:39+00:00",
+        "eventFile": "usage-event.json",
+        "eventSha256": "9f79ad62221235fc0866bdc3713d4071f97392f34a4380cdb0a0512e1a369b0f",
+        "recoveredFields": [
+          "cache_write_input_tokens",
+          "reasoning_output_tokens"
+        ],
+        "note": "Captured during the original trial; omitted by the v0.1.0 collector. No model rerun."
+      }
     }
   ]
 }

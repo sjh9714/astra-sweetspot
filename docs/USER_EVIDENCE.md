@@ -19,6 +19,7 @@ There is counterevidence to a simple “Astra wastes usage” story: the [launch
 - [astra-room-test](https://github.com/SushaanthSrinivasan/astra-room-test): already compares Astra efforts on a Blender room. Reasoning comparisons are not an empty category. Sweetspot uses coding regressions, adds Sol, and makes the result independently checkable.
 - [astra-advisor](https://github.com/DannyMac180/astra-advisor): an existing model orchestration plugin. A new fixed multi-model workflow would need stronger evidence than general quota complaints.
 - [codex-usage-tracker](https://github.com/douglasmonsky/codex-usage-tracker): existing session usage analysis. This experiment does not replace it or try to attribute subscription quota.
+- [OpenBench](https://github.com/minghinmatthewlam/openbench/blob/db193457a3d9128cd4d01fd839c2a890c186c9ac/docs/private-evals.md): already provides private-codebase evaluation with task suites, runs, and receipts. Its documented workflow was reviewed on September 5; we did not run its live benchmarks. Generic private-repository comparisons are not an unserved gap.
 
 ## What remains a hypothesis
 
@@ -53,3 +54,9 @@ The r/coolgithubprojects introduction now displayed 198 views and no comments. G
 A separate public maintainer request, [sungjunlee/skills #123](https://github.com/sungjunlee/skills/issues/123), asks for Astra low/medium versus Sol medium, at least three attempts per fixture, several task categories, and separate quality, token, time, and cost evidence. It explicitly defers revisiting the evaluation until October 5 or later. This is concrete demand for broader evaluation, not an endorsement of this CLI. Our two-task, one-attempt pilot does not satisfy those acceptance criteria.
 
 We [shared the working CLI telemetry path and an actual receipt](https://github.com/sungjunlee/skills/issues/123#issuecomment-5550763384), disclosing authorship and the missing repetition, served-model identity, reasoning-token breakdown, and quota measurement. No reply from the maintainer has been received at this checkpoint. The next useful expansion needs a task and success criterion that broaden the evidence, rather than another similar example from the same library.
+
+## Follow-up — original usage records and a different failure report
+
+At 09:48 UTC, inspection of the original pilot logs found that the CLI had provided reasoning and cache-write counters in all eight runs. Their omission was in our v0.1.0 collector. The [v0.1.1 correction](METHODOLOGY.md#usage-field-correction) restores those reported values with the original usage events and their hashes. No trial was rerun, and this does not supply the missing quota attribution or repeated evaluation.
+
+Separately, [Shai Mishali reports Astra identifying a problem without acting on it](https://x.com/freak4pc/status/2096125712243560491), along with dissatisfaction with speed at high effort and capability at medium. This is a public developer report, not an independently reproduced failure. Our [reply](https://x.com/jinhyuk9714/status/2096168666748661766) asks for a public reproduction and discloses that the two existing JavaScript tasks do not capture that behavior. No reproduction has been supplied at this checkpoint.

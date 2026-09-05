@@ -37,6 +37,8 @@ Two historical [p-retry bugs](docs/METHODOLOGY.md#tasks-and-grading), four model
 
 **Input includes cached input. Tokens are not subscription quota or money paid.** Time includes Codex startup and its own tests. The table uses requested model identifiers; the CLI may not report the served identifier. Failed and timed-out trials stay in the data.
 
+**v0.1.1 telemetry correction:** the JSON receipts now also retain the CLI's reported reasoning-token subset and cache-write tokens. These fields were recovered from the eight original usage events; no trial was rerun. [See the correction and evidence](docs/METHODOLOGY.md#usage-field-correction).
+
 ## Reproduce one trial
 
 ```sh

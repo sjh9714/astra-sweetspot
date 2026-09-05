@@ -29,10 +29,18 @@ A subsequent [upstream runtime check](https://github.com/sjh9714/astra-sweetspot
 - `codex exec --ignore-user-config --ephemeral --sandbox workspace-write --json`; explicit requested model and effort, `approval_policy="never"`, and a 180-second process deadline. The runner disables web search, project instruction loading, apps, hooks, memories, goals, and multi-agent tools for that invocation. It does not edit the user's configuration or ignore execpolicy rules.
 - Codex still has its own system instructions and locally discovered capabilities. This is not a hermetic harness. The same invocation policy is applied to all conditions. Neither the model nor the package needs network access to install fixture dependencies; model inference itself requires a connection.
 - **Seconds:** wall time from spawning Codex until it exits, including startup, reasoning, edits, and any tests the model chooses to run. External grading is excluded. Network latency, server load, and fixed run order can affect the result.
-- **Tokens:** the CLI's `turn.completed.usage` fields. Input includes cached input; do not add them together. Repeated context across tool calls may be counted repeatedly. Missing fields are `null`, never guessed. These are **not** subscription quota, unique prompt size, or actual money paid.
+- **Tokens:** the CLI's `turn.completed.usage` fields. Input includes cached input; do not add them together. `reasoning_output_tokens` is a subset of `output_tokens`, not an extra output total. `cache_write_input_tokens` is preserved when reported. Repeated context across tool calls may be counted repeatedly. Missing fields are `null`, never guessed. These are **not** subscription quota, unique prompt size, or actual money paid.
 - **Requested vs observed model:** the requested identifier is recorded. `observedModel: null` means the JSONL stream did not expose the served model; no independent model identity verification is claimed.
 - **Checks:** passed / total external assertions. Model exit status is shown separately. A timed-out or failed run is retained even if a partial patch happens to pass the grader.
 - Receipts include source, prompt, grader, candidate, and patch SHA-256 hashes. Sanitized receipts, candidate patches, and candidate files are published. Raw JSONL, stderr, and the last model message stay private by default; they can include local paths and tool output.
+
+### Usage-field correction
+
+On September 5, 2026, inspection of the original event logs found that the v0.1.0 collector had omitted two fields the CLI actually provided: `reasoning_output_tokens` and `cache_write_input_tokens`. Version 0.1.1 retains both. A reported zero stays zero; an unavailable field stays `null`.
+
+Both fields were restored to all eight pilot receipts from their original `turn.completed` records. Each receipt directory now includes that original usage-only event as `usage-event.json`; `usageSupplement` records its hash, the recovery time, and the added fields. The events contain only a type and numeric usage counters. Full transcripts remain private. CI compares the event, receipt, and collector output.
+
+No trial was rerun. The existing input, cached-input, output, time, status, patch, and grading values are unchanged. Reasoning counts are already included in output and must not be added to it; see [OpenAI's usage example](https://developers.openai.com/api/docs/guides/reasoning#managing-the-context-window) and the [Codex 0.153.0 token fields and display calculation](https://github.com/openai/codex/blob/rust-v0.153.0/codex-rs/protocol/src/protocol.rs#L2393). All eight events reported zero cache-write tokens; this does not establish a general cache-write or subscription-billing policy. The compact table retains its original columns; `report --json` includes the recovered fields and their evidence.
 
 ## Limits
 
