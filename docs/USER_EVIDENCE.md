@@ -27,3 +27,11 @@ The evidence supports questions about model/effort choice and concrete examples.
 An [open question to the original X poster](https://x.com/jinhyuk9714/status/2096111806096027754) asked what they were trying to finish and what workaround they used. At 05:59 UTC it had no reply. No user interview or installation commitment is claimed.
 
 Distribution will follow the actual question: share the measured result in a relevant public discussion, identify the author's involvement, and invite a concrete next task. No bulk replies, paid stars, star exchanges, or fabricated testimonials. GitHub stars and views indicate interest; independently submitted task reproductions or repeat use would provide stronger evidence.
+
+## Launch follow-up — 06:56 UTC
+
+The eight-run pilot is published. A [public X result post](https://x.com/jinhyuk9714/status/2096127446303252510) and a [follow-up under the original question](https://x.com/jinhyuk9714/status/2096128197213692305) link the actual data and state its one-attempt and quota limits. The existing [awesome collection proposal](https://github.com/Anil-matcha/awesome-gpt-6-astra/pull/2) was updated to this experiment; no duplicate submission was opened.
+
+A new [Reddit model-selection question](https://www.reddit.com/r/OpenAI/comments/1w7t4v7/model_selection_whats_your_choice_for_what/) independently asks which tasks fit which model and whether Astra Light is equivalent to Sol High. Our [reply](https://www.reddit.com/r/OpenAI/comments/1w7t4v7/comment/p7xgggs/) gives the narrow coding data, explicitly says it cannot establish that ChatGPT equivalence, and asks for the user's actual tasks. It contains no project link. That user's answer is pending.
+
+At this checkpoint the new repository has **0 stars, 0 forks, and 0 issues**. Publication, our own comments, npm smoke-test downloads, and our page views are not independent adoption. No user-requested task reproduction has arrived yet.
