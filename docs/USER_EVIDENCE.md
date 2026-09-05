@@ -35,3 +35,13 @@ The eight-run pilot is published. A [public X result post](https://x.com/jinhyuk
 A new [Reddit model-selection question](https://www.reddit.com/r/OpenAI/comments/1w7t4v7/model_selection_whats_your_choice_for_what/) independently asks which tasks fit which model and whether Astra Light is equivalent to Sol High. Our [reply](https://www.reddit.com/r/OpenAI/comments/1w7t4v7/comment/p7xgggs/) gives the narrow coding data, explicitly says it cannot establish that ChatGPT equivalence, and asks for the user's actual tasks. It contains no project link. That user's answer is pending.
 
 At this checkpoint the new repository has **0 stars, 0 forks, and 0 issues**. Publication, our own comments, npm smoke-test downloads, and our page views are not independent adoption. No user-requested task reproduction has arrived yet.
+
+## Follow-up — 07:51 UTC
+
+The [r/coolgithubprojects introduction](https://www.reddit.com/r/coolgithubprojects/comments/1w7th7h/astra_sweetspot_onecommand_astra_vs_sol/) reached 108 displayed views, with no comments and a score of 1 that includes the author's automatic vote. The X result post displayed 5 views and no replies or likes. The repository still had 0 stars and 0 forks. These are early, limited observations; views are not unique people or installations, and a lack of response does not by itself identify the problem.
+
+The project was also shared in the explicitly invited [r/AI_Agents weekly project-display thread](https://www.reddit.com/r/AI_Agents/comments/1w5ehca/comment/p7xj30t/), with the measured results, author disclosure, limitations, and a request for a concrete different task. No independent task suggestion has been received at this checkpoint.
+
+Further [model-selection replies](https://www.reddit.com/r/OpenAI/comments/1w7t4v7/model_selection_whats_your_choice_for_what/) include users considering a switch from Sol to Astra medium/high, as well as claims that lower Astra efforts make Sol unnecessary. They remain personal reports and unverified generalizations. The original poster has not yet supplied a task in response to our question. We will not treat those replies as support for a universal model ranking.
+
+Separately, [additional upstream runtime checks](../research/upstream-2026-09-05) found no newly failing tests relative to the starting code across the eight existing patches. This improves the inspectability of the experiment; it is not new evidence of product demand.

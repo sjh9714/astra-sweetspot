@@ -21,6 +21,8 @@ The external grader tests cancellation in four lifecycle locations, ordinary ret
 
 Before any model trial, the original source was verified to fail the relevant checks and the upstream fix to pass every check. `npm test` repeats that verification. This is a focused regression suite, **not the full upstream test suite**, and a passing score does not prove a production-ready fix.
 
+A subsequent [upstream runtime check](https://github.com/sjh9714/astra-sweetspot/tree/main/research/upstream-2026-09-05) applied unchanged historical AVA tests to the same eight candidate files and to both controls. It found no additional failures relative to the starting code in that environment: 63/63 on `abort-delay`, and 12/13 on `abort-cleanup`, including a historical error-message assertion that also fails on the original and known fix. This post-pilot check has separate logs and does not replace the original grades. Upstream lint and type tests were not run.
+
 ## Harness and measurements
 
 - Codex CLI 0.153.0, existing ChatGPT authentication, Node 22 on macOS for the published pilot. Exact versions, platform, and architecture are in every receipt.

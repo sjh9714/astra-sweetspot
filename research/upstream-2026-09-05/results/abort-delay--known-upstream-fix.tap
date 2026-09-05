@@ -1,0 +1,70 @@
+TAP version 13
+ok 1 - factor affects exponential backoff
+ok 2 - timeouts are incremental with factor
+ok 3 - setTimeout is never called with 0 minTimeout
+ok 4 - maxRetryTime uses monotonic clock
+ok 5 - minTimeout is respected even with small factor
+ok 6 - maxTimeout caps retry delays
+ok 7 - skipped attempts do not impact backoff
+ok 8 - randomize affects retry delays
+ok 9 - factor <= 0 is treated as 1 (stable delays)
+ok 10 - unref option prevents timeout from keeping process alive
+ok 11 - unref option handles missing unref gracefully
+ok 12 - Only consumed retries advance backoff
+ok 13 - AbortError - string
+ok 14 - AbortError - error
+ok 15 - aborts retries if input function returns null
+ok 16 - aborts immediately if signal is already aborted with reason
+ok 17 - throws on negative retry count
+ok 18 - throws on non-number retries
+ok 19 - throws on NaN retries
+ok 20 - unsupported `forever` option throws
+ok 21 - shouldRetry is not called for AbortError
+ok 22 - AbortError short-circuits callbacks
+ok 23 - onFailedAttempt can throw to abort retries
+ok 24 - retry context object is immutable
+ok 25 - throws useful error message when non-error is thrown
+ok 26 - handles zero maxRetryTime
+ok 27 - makeRetriable preserves `this` context
+ok 28 - shouldRetry is not called for non-network TypeError
+ok 29 - handles zero retries
+ok 30 - onFailedAttempt still called when retries is zero
+ok 31 - handles non-Error rejection values
+ok 32 - throws error from shouldRetry
+ok 33 - shouldConsumeRetry receives normalized error for non-error throws
+ok 34 - shouldConsumeRetry returning false still respects retry budget
+ok 35 - onFailedAttempt then shouldRetry order
+ok 36 - onFailedAttempt is called even when shouldRetry returns false
+ok 37 - shouldConsumeRetry returning false still calls shouldRetry
+ok 38 - operation stops immediately on AbortError
+ok 39 - makeRetriable passes arguments and options
+ok 40 - makeRetriable wraps and retries the function
+ok 41 - handles synchronous input function
+ok 42 - invalid numeric options throw
+ok 43 - retriesLeft is Infinity when retries is Infinity
+ok 44 - retries forever when specified
+ok 45 - no retry on TypeError
+ok 46 - signal abort during delay cancels promptly
+ok 47 - maxTimeout lower than minTimeout caps delay
+ok 48 - errors are preserved when maxRetryTime exceeded
+ok 49 - handles invalid factor values
+ok 50 - onFailedAttempt time counts toward maxRetryTime
+ok 51 - shouldConsumeRetry time counts toward maxRetryTime
+ok 52 - onFailedAttempt can be undefined
+ok 53 - shouldRetry can be undefined
+ok 54 - preserves user stack trace through async retries
+ok 55 - handles async shouldRetry with maxRetryTime
+ok 56 - maxRetryTime limits total retry duration
+ok 57 - onFailedAttempt can return a promise to add a delay
+ok 58 - retries
+ok 59 - retry on TypeError - failed to fetch
+ok 60 - aborts
+ok 61 - preserves the abort reason
+ok 62 - shouldRetry controls retry behavior
+ok 63 - onFailedAttempt provides correct error details
+
+1..63
+# tests 63
+# pass 63
+# fail 0
+

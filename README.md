@@ -31,6 +31,8 @@ That command shows bundled results. It makes **no model call** and needs no API 
 
 Two historical [p-retry bugs](docs/METHODOLOGY.md#tasks-and-grading), four model/effort settings, **one attempt per condition**. Same starting source and prompt within each task. Both are small tasks from one library and may be in training data. This is not a held-out benchmark or a model leaderboard.
 
+[Supplementary upstream runtime checks](research/upstream-2026-09-05): all four settings match their starting code's results—63/63 on one task, 12/13 on the other. The one failure also occurs with the known upstream fix; its log and explanation are included. No model trial was rerun.
+
 **Input includes cached input. Tokens are not subscription quota or money paid.** Time includes Codex startup and its own tests. The table uses requested model identifiers; the CLI may not report the served identifier. Failed and timed-out trials stay in the data.
 
 ## Reproduce one trial

@@ -1,0 +1,211 @@
+{
+  "checkedAt": "2026-09-05T07:45:12Z",
+  "node": "v22.23.2",
+  "npm": "10.9.8",
+  "checks": [
+    {
+      "case": "abort-delay",
+      "label": "baseline",
+      "candidateSha256": "4929565e1e08b5ee9441e81615b332302d599eca1405c4fd84e35001dd64a5f6",
+      "testSha256": "a0d08864c7d9dc4d268faa56edc907cfbcce9b71e4d232822e8fd0c1c30f78a8",
+      "lockSha256": "94b99389edeca30644c020514362deeaa2e3f074a127b754bba7797fe8bc61e9",
+      "exitCode": 0,
+      "seconds": 7.825,
+      "counts": {
+        "tests": 63,
+        "pass": 63,
+        "fail": 0
+      },
+      "failures": [],
+      "log": "abort-delay--baseline.tap"
+    },
+    {
+      "case": "abort-delay",
+      "label": "known-upstream-fix",
+      "candidateSha256": "96e272a8b1f97ed65a2592c19c9f5dd180ff3e41d643cd8b202eedab1ef49426",
+      "testSha256": "a0d08864c7d9dc4d268faa56edc907cfbcce9b71e4d232822e8fd0c1c30f78a8",
+      "lockSha256": "94b99389edeca30644c020514362deeaa2e3f074a127b754bba7797fe8bc61e9",
+      "exitCode": 0,
+      "seconds": 3.777,
+      "counts": {
+        "tests": 63,
+        "pass": 63,
+        "fail": 0
+      },
+      "failures": [],
+      "log": "abort-delay--known-upstream-fix.tap"
+    },
+    {
+      "case": "abort-delay",
+      "label": "2026-09-05T06-24-04-221Z-sol-medium-48beb0",
+      "candidateSha256": "1359fac6b959cb65b31967e67b0522d81f7e79959e15f171623d65fb92949fc7",
+      "testSha256": "a0d08864c7d9dc4d268faa56edc907cfbcce9b71e4d232822e8fd0c1c30f78a8",
+      "lockSha256": "94b99389edeca30644c020514362deeaa2e3f074a127b754bba7797fe8bc61e9",
+      "exitCode": 0,
+      "seconds": 3.66,
+      "counts": {
+        "tests": 63,
+        "pass": 63,
+        "fail": 0
+      },
+      "failures": [],
+      "log": "abort-delay--2026-09-05T06-24-04-221Z-sol-medium-48beb0.tap"
+    },
+    {
+      "case": "abort-delay",
+      "label": "2026-09-05T06-27-10-716Z-astra-low-432933",
+      "candidateSha256": "2805291fad3bd9c1c1269913e93844bb62d59d741fa1d5de13d5975ee79679ed",
+      "testSha256": "a0d08864c7d9dc4d268faa56edc907cfbcce9b71e4d232822e8fd0c1c30f78a8",
+      "lockSha256": "94b99389edeca30644c020514362deeaa2e3f074a127b754bba7797fe8bc61e9",
+      "exitCode": 0,
+      "seconds": 3.683,
+      "counts": {
+        "tests": 63,
+        "pass": 63,
+        "fail": 0
+      },
+      "failures": [],
+      "log": "abort-delay--2026-09-05T06-27-10-716Z-astra-low-432933.tap"
+    },
+    {
+      "case": "abort-delay",
+      "label": "2026-09-05T06-28-29-078Z-astra-medium-54cf2a",
+      "candidateSha256": "eb55f48812ab876fd09f4caf4febb5c5b1217df34420f7636118ffefb26575e4",
+      "testSha256": "a0d08864c7d9dc4d268faa56edc907cfbcce9b71e4d232822e8fd0c1c30f78a8",
+      "lockSha256": "94b99389edeca30644c020514362deeaa2e3f074a127b754bba7797fe8bc61e9",
+      "exitCode": 0,
+      "seconds": 3.725,
+      "counts": {
+        "tests": 63,
+        "pass": 63,
+        "fail": 0
+      },
+      "failures": [],
+      "log": "abort-delay--2026-09-05T06-28-29-078Z-astra-medium-54cf2a.tap"
+    },
+    {
+      "case": "abort-delay",
+      "label": "2026-09-05T06-30-10-623Z-astra-high-b8bcf8",
+      "candidateSha256": "241029f0bf8f9c819ae29c470158f8aecc9b09b2ff243b272c2750efe21229ba",
+      "testSha256": "a0d08864c7d9dc4d268faa56edc907cfbcce9b71e4d232822e8fd0c1c30f78a8",
+      "lockSha256": "94b99389edeca30644c020514362deeaa2e3f074a127b754bba7797fe8bc61e9",
+      "exitCode": 0,
+      "seconds": 3.692,
+      "counts": {
+        "tests": 63,
+        "pass": 63,
+        "fail": 0
+      },
+      "failures": [],
+      "log": "abort-delay--2026-09-05T06-30-10-623Z-astra-high-b8bcf8.tap"
+    },
+    {
+      "case": "abort-cleanup",
+      "label": "baseline",
+      "candidateSha256": "b3b4639112188e9aef794946e851ae8fd6615a6c265ac638c746b539b7ac1ae0",
+      "testSha256": "1630a115db865cda5268345ec9147333d8317b4e336c2c5c3b9a076824a8a213",
+      "lockSha256": "6ad70fd8069835bd6dc9de15751708b2a968912952d5fe9cea5ccc186311f975",
+      "exitCode": 1,
+      "seconds": 7.534,
+      "counts": {
+        "tests": 13,
+        "pass": 12,
+        "fail": 1
+      },
+      "failures": [
+        "aborts with an AbortSignal"
+      ],
+      "log": "abort-cleanup--baseline.tap"
+    },
+    {
+      "case": "abort-cleanup",
+      "label": "known-upstream-fix",
+      "candidateSha256": "ab17c26f545e08f902b17acd7a65d6c96354313af45532c33757d4e1d3afa7a3",
+      "testSha256": "1630a115db865cda5268345ec9147333d8317b4e336c2c5c3b9a076824a8a213",
+      "lockSha256": "6ad70fd8069835bd6dc9de15751708b2a968912952d5fe9cea5ccc186311f975",
+      "exitCode": 1,
+      "seconds": 7.445,
+      "counts": {
+        "tests": 13,
+        "pass": 12,
+        "fail": 1
+      },
+      "failures": [
+        "aborts with an AbortSignal"
+      ],
+      "log": "abort-cleanup--known-upstream-fix.tap"
+    },
+    {
+      "case": "abort-cleanup",
+      "label": "2026-09-05T06-32-53-812Z-sol-medium-fff3ad",
+      "candidateSha256": "c6c673641f8dc4255b0af25ff518604560052c1873b87ae8c11fac9b97de1dff",
+      "testSha256": "1630a115db865cda5268345ec9147333d8317b4e336c2c5c3b9a076824a8a213",
+      "lockSha256": "6ad70fd8069835bd6dc9de15751708b2a968912952d5fe9cea5ccc186311f975",
+      "exitCode": 1,
+      "seconds": 7.473,
+      "counts": {
+        "tests": 13,
+        "pass": 12,
+        "fail": 1
+      },
+      "failures": [
+        "aborts with an AbortSignal"
+      ],
+      "log": "abort-cleanup--2026-09-05T06-32-53-812Z-sol-medium-fff3ad.tap"
+    },
+    {
+      "case": "abort-cleanup",
+      "label": "2026-09-05T06-35-03-397Z-astra-low-73f206",
+      "candidateSha256": "b95cef8a302242a874337b78235f454b8aa49f74c29a4909db95cf8609e03321",
+      "testSha256": "1630a115db865cda5268345ec9147333d8317b4e336c2c5c3b9a076824a8a213",
+      "lockSha256": "6ad70fd8069835bd6dc9de15751708b2a968912952d5fe9cea5ccc186311f975",
+      "exitCode": 1,
+      "seconds": 7.457,
+      "counts": {
+        "tests": 13,
+        "pass": 12,
+        "fail": 1
+      },
+      "failures": [
+        "aborts with an AbortSignal"
+      ],
+      "log": "abort-cleanup--2026-09-05T06-35-03-397Z-astra-low-73f206.tap"
+    },
+    {
+      "case": "abort-cleanup",
+      "label": "2026-09-05T06-36-19-738Z-astra-medium-514d9c",
+      "candidateSha256": "8cdfd4450f69a0429cacec02e8a01331de0684e9fd469b36d3db4171f6b67afb",
+      "testSha256": "1630a115db865cda5268345ec9147333d8317b4e336c2c5c3b9a076824a8a213",
+      "lockSha256": "6ad70fd8069835bd6dc9de15751708b2a968912952d5fe9cea5ccc186311f975",
+      "exitCode": 1,
+      "seconds": 7.448,
+      "counts": {
+        "tests": 13,
+        "pass": 12,
+        "fail": 1
+      },
+      "failures": [
+        "aborts with an AbortSignal"
+      ],
+      "log": "abort-cleanup--2026-09-05T06-36-19-738Z-astra-medium-514d9c.tap"
+    },
+    {
+      "case": "abort-cleanup",
+      "label": "2026-09-05T06-37-37-177Z-astra-high-5ea5ae",
+      "candidateSha256": "c28962973a3a20fa86294ded6425bd6bf1e4614b2810ea269c76c428cdf50ef9",
+      "testSha256": "1630a115db865cda5268345ec9147333d8317b4e336c2c5c3b9a076824a8a213",
+      "lockSha256": "6ad70fd8069835bd6dc9de15751708b2a968912952d5fe9cea5ccc186311f975",
+      "exitCode": 1,
+      "seconds": 7.466,
+      "counts": {
+        "tests": 13,
+        "pass": 12,
+        "fail": 1
+      },
+      "failures": [
+        "aborts with an AbortSignal"
+      ],
+      "log": "abort-cleanup--2026-09-05T06-37-37-177Z-astra-high-5ea5ae.tap"
+    }
+  ]
+}

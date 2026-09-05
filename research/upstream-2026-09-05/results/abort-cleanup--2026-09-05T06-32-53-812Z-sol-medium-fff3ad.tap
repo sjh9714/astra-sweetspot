@@ -1,0 +1,30 @@
+TAP version 13
+ok 1 - AbortError - string
+ok 2 - AbortError - error
+ok 3 - onFailedAttempt can throw, causing all retries to be aborted
+ok 4 - throws useful error message when non-error is thrown
+ok 5 - no retry on TypeError
+ok 6 - onFailedAttempt can return a promise to add a delay
+ok 7 - retries
+ok 8 - aborts
+ok 9 - retry on TypeError - failed to fetch
+ok 10 - onFailedAttempt is called expected number of times
+not ok 11 - aborts with an AbortSignal
+  ---
+    name: AssertionError
+    assertion: throwsAsync
+    values:
+      'Promise rejected with unexpected exception:': 'DOMException {}'
+      'Expected message to equal:': '''The operation was aborted.'''
+    at: |-
+      t.throwsAsync.pRetry.signal (file://test.js:226:16)
+      async RetryOperation._fn (file://index.js:74:24)
+  ...
+ok 12 - preserves the abort reason
+ok 13 - onFailedAttempt is called before last rejection
+
+1..13
+# tests 13
+# pass 12
+# fail 1
+
