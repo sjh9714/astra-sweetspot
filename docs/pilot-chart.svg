@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="453.6pt" viewBox="0 0 864 453.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Astra Sweetspot: eight-run pilot</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Astra Sweetspot: eight-run pilot</dc:title>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 453.6
+L 864 453.6
+L 864 0
+L 0 0
+z
+" style="fill: #f6f5f0"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 147.744 312.984
+L 411.264 312.984
+L 411.264 146.9664
+L 147.744 146.9664
+z
+" style="fill: #f6f5f0"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 147.744 312.984
+L 147.744 146.9664
+" clip-path="url(#p2cc98c5148)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="147.744" y="330.582437" transform="rotate(-0 147.744 330.582437)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 228.827077 312.984
+L 228.827077 146.9664
+" clip-path="url(#p2cc98c5148)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="228.827077" y="330.582437" transform="rotate(-0 228.827077 330.582437)">60</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 309.910154 312.984
+L 309.910154 146.9664
+" clip-path="url(#p2cc98c5148)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="309.910154" y="330.582437" transform="rotate(-0 309.910154 330.582437)">120</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 390.993231 312.984
+L 390.993231 146.9664
+" clip-path="url(#p2cc98c5148)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="390.993231" y="330.582437" transform="rotate(-0 390.993231 330.582437)">180</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="279.504" y="351.020406" transform="rotate(-0 279.504 351.020406)">Wall time (seconds)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9"/>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="137.744" y="171.120359" transform="rotate(-0 137.744 171.120359)">Sol medium</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_10"/>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="137.744" y="213.396295" transform="rotate(-0 137.744 213.396295)">Astra low</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11"/>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="137.744" y="255.67223" transform="rotate(-0 137.744 255.67223)">Astra medium</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12"/>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="137.744" y="297.948166" transform="rotate(-0 137.744 297.948166)">Astra high</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52675e" x="147.744" y="139.495608" transform="rotate(-0 147.744 139.495608)">7/7 focused checks passed by each run</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 147.744 154.512655
+L 324.491594 154.512655
+L 324.491594 178.609938
+L 147.744 178.609938
+z
+" clip-path="url(#p2cc98c5148)" style="fill: #879990"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 147.744 196.78859
+L 253.389844 196.78859
+L 253.389844 220.885874
+L 147.744 220.885874
+z
+" clip-path="url(#p2cc98c5148)" style="fill: #355f49"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 147.744 239.064526
+L 284.73521 239.064526
+L 284.73521 263.16181
+L 147.744 263.16181
+z
+" clip-path="url(#p2cc98c5148)" style="fill: #60815b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 147.744 281.340462
+L 368.050774 281.340462
+L 368.050774 305.437745
+L 147.744 305.437745
+z
+" clip-path="url(#p2cc98c5148)" style="fill: #8aa06d"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="328.545748" y="169.596609" transform="rotate(-0 328.545748 169.596609)">130.8</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="257.443998" y="211.872545" transform="rotate(-0 257.443998 211.872545)">78.2</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="288.789364" y="254.14848" transform="rotate(-0 288.789364 254.14848)">101.4</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="372.104928" y="296.424416" transform="rotate(-0 372.104928 296.424416)">163.0</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="147.744" y="115.9664" transform="rotate(-0 147.744 115.9664)">Abort before retry delay</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 563.328 312.984
+L 826.848 312.984
+L 826.848 146.9664
+L 563.328 146.9664
+z
+" style="fill: #f6f5f0"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_13">
+      <path d="M 563.328 312.984
+L 563.328 146.9664
+" clip-path="url(#p78f443a239)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_16">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="563.328" y="330.582437" transform="rotate(-0 563.328 330.582437)">0</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_15">
+      <path d="M 644.411077 312.984
+L 644.411077 146.9664
+" clip-path="url(#p78f443a239)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_17">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="644.411077" y="330.582437" transform="rotate(-0 644.411077 330.582437)">60</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_17">
+      <path d="M 725.494154 312.984
+L 725.494154 146.9664
+" clip-path="url(#p78f443a239)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_18">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="725.494154" y="330.582437" transform="rotate(-0 725.494154 330.582437)">120</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_19">
+      <path d="M 806.577231 312.984
+L 806.577231 146.9664
+" clip-path="url(#p78f443a239)" style="fill: none; stroke: #d5dcd1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_19">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="806.577231" y="330.582437" transform="rotate(-0 806.577231 330.582437)">180</text>
+     </g>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52675e" x="695.088" y="351.020406" transform="rotate(-0 695.088 351.020406)">Wall time (seconds)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_5">
+     <g id="line2d_21"/>
+     <g id="text_21">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="553.328" y="171.120359" transform="rotate(-0 553.328 171.120359)">Sol medium</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_22"/>
+     <g id="text_22">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="553.328" y="213.396295" transform="rotate(-0 553.328 213.396295)">Astra low</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_23"/>
+     <g id="text_23">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="553.328" y="255.67223" transform="rotate(-0 553.328 255.67223)">Astra medium</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_24"/>
+     <g id="text_24">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="553.328" y="297.948166" transform="rotate(-0 553.328 297.948166)">Astra high</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52675e" x="563.328" y="139.495608" transform="rotate(-0 563.328 139.495608)">8/8 focused checks passed by each run</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 563.328 154.512655
+L 738.228251 154.512655
+L 738.228251 178.609938
+L 563.328 178.609938
+z
+" clip-path="url(#p78f443a239)" style="fill: #879990"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 563.328 196.78859
+L 666.256209 196.78859
+L 666.256209 220.885874
+L 563.328 220.885874
+z
+" clip-path="url(#p78f443a239)" style="fill: #355f49"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 563.328 239.064526
+L 667.738678 239.064526
+L 667.738678 263.16181
+L 563.328 263.16181
+z
+" clip-path="url(#p78f443a239)" style="fill: #60815b"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 563.328 281.340462
+L 729.782097 281.340462
+L 729.782097 305.437745
+L 563.328 305.437745
+z
+" clip-path="url(#p78f443a239)" style="fill: #8aa06d"/>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="742.282405" y="169.596609" transform="rotate(-0 742.282405 169.596609)">129.4</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="670.310363" y="211.872545" transform="rotate(-0 670.310363 211.872545)">76.2</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="671.792832" y="254.14848" transform="rotate(-0 671.792832 254.14848)">77.3</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="733.836251" y="296.424416" transform="rotate(-0 733.836251 296.424416)">123.2</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="563.328" y="115.9664" transform="rotate(-0 563.328 115.9664)">Remove finished listeners</text>
+   </g>
+  </g>
+  <g id="text_31">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52675e" x="38.88" y="30.3912" transform="rotate(-0 38.88 30.3912)">ASTRA SWEETSPOT  /  SEPTEMBER 5, 2026</text>
+  </g>
+  <g id="text_32">
+   <text style="font-weight: 700; font-size: 28px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="38.88" y="67.5864" transform="rotate(-0 38.88 67.5864)">Astra vs Sol on two public bugs</text>
+  </g>
+  <g id="text_33">
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52675e" x="38.88" y="94.8024" transform="rotate(-0 38.88 94.8024)">All 8 runs passed their focused regression checks.</text>
+  </g>
+  <g id="text_34">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #162f2b" x="38.88" y="377.3952" transform="rotate(-0 38.88 377.3952)">One attempt per requested setting and task. This does not establish reliability.</text>
+  </g>
+  <g id="text_35">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52675e" x="38.88" y="396.4464" transform="rotate(-0 38.88 396.4464)">Historical p-retry bugs. Time includes Codex startup and its tests. No quota comparison.</text>
+  </g>
+  <g id="text_36">
+   <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #162f2b" x="38.88" y="430.0128" transform="rotate(-0 38.88 430.0128)">npx astra-sweetspot</text>
+  </g>
+  <g id="text_37">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #52675e" x="829.44" y="427.7448" transform="rotate(-0 829.44 427.7448)">github.com/sjh9714/astra-sweetspot</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2cc98c5148">
+   <rect x="147.744" y="146.9664" width="263.52" height="166.0176"/>
+  </clipPath>
+  <clipPath id="p78f443a239">
+   <rect x="563.328" y="146.9664" width="263.52" height="166.0176"/>
+  </clipPath>
+ </defs>
+</svg>

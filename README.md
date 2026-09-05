@@ -6,6 +6,8 @@ Small, reproducible Astra vs Sol experiments on real public bugs. Independent re
 
 [**See the results →**](https://sjh9714.github.io/astra-sweetspot/) · [Method](docs/METHODOLOGY.md) · [Suggest a real task](https://github.com/sjh9714/astra-sweetspot/issues/new?template=real-task.yml)
 
+[![Wall times for eight runs on two historical p-retry bugs. One attempt per model and effort; all passed their focused checks.](docs/pilot-chart.png)](https://sjh9714.github.io/astra-sweetspot/)
+
 ```sh
 npx astra-sweetspot
 ```
@@ -69,5 +71,7 @@ Suggest a **real task where your current model or effort struggles**, with publi
 If these receipts help you decide what to try, **star the repository** to follow the next experiment. Stars indicate interest; they do not prove the tool is being used.
 
 Development: no runtime dependencies or install scripts. Run `npm test` and `npm run site`. Model inference is intentionally excluded from CI. Automated checks cover Node 20/22 on Linux and Node 22 on Windows; the published live model trials ran on macOS only.
+
+The [shareable chart](docs/pilot-chart.png) is also available as [SVG](docs/pilot-chart.svg). To regenerate it from `results/pilot.json`, run `python3 scripts/plot-pilot.py` with Matplotlib 3.10+. This optional plotting dependency is not needed by the CLI or site build.
 
 MIT. [Third-party licenses](THIRD_PARTY.md). Independent of OpenAI and p-retry's maintainers.

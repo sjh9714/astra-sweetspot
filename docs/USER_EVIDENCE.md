@@ -45,3 +45,11 @@ The project was also shared in the explicitly invited [r/AI_Agents weekly projec
 Further [model-selection replies](https://www.reddit.com/r/OpenAI/comments/1w7t4v7/model_selection_whats_your_choice_for_what/) include users considering a switch from Sol to Astra medium/high, as well as claims that lower Astra efforts make Sol unnecessary. They remain personal reports and unverified generalizations. The original poster has not yet supplied a task in response to our question. We will not treat those replies as support for a universal model ranking.
 
 Separately, [additional upstream runtime checks](../research/upstream-2026-09-05) found no newly failing tests relative to the starting code across the eight existing patches. This improves the inspectability of the experiment; it is not new evidence of product demand.
+
+## Follow-up — 09:10 UTC
+
+The r/coolgithubprojects introduction now displayed 198 views and no comments. GitHub still had 0 stars at the 08:59 UTC check. A first external reaction appeared on X: the author of an effort-selection question, Yerkebulan Rakhimov, liked [our reply with the pilot results](https://x.com/jinhyuk9714/status/2096145078809215050). The notification and original reply were checked in Chrome. This is an interest signal; no installation, reproduction, or GitHub star is established by it.
+
+A separate public maintainer request, [sungjunlee/skills #123](https://github.com/sungjunlee/skills/issues/123), asks for Astra low/medium versus Sol medium, at least three attempts per fixture, several task categories, and separate quality, token, time, and cost evidence. It explicitly defers revisiting the evaluation until October 5 or later. This is concrete demand for broader evaluation, not an endorsement of this CLI. Our two-task, one-attempt pilot does not satisfy those acceptance criteria.
+
+We [shared the working CLI telemetry path and an actual receipt](https://github.com/sungjunlee/skills/issues/123#issuecomment-5550763384), disclosing authorship and the missing repetition, served-model identity, reasoning-token breakdown, and quota measurement. No reply from the maintainer has been received at this checkpoint. The next useful expansion needs a task and success criterion that broaden the evidence, rather than another similar example from the same library.
