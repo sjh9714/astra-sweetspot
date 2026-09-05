@@ -26,7 +26,7 @@ for (const row of report.runs) {
     await cp(join(root, 'fixtures', row.case), directory, {recursive: true});
     await execute('git', ['init', '--quiet'], {cwd: directory});
     const patch = await readFile(join(artifact, 'candidate.patch'), 'utf8');
-    if (patch.length) await execute('git', ['apply', '--', join(artifact, 'candidate.patch')], {cwd: directory});
+    if (patch.length) await execute('git', ['-c', 'core.autocrlf=false', 'apply', '--', join(artifact, 'candidate.patch')], {cwd: directory});
     assert.equal(sha256(await readFile(join(directory, 'index.js'))), row.candidateSha256);
   } finally { await rm(directory, {recursive: true, force: true}); }
   console.log(`Verified ${row.case} ${row.requestedModel} ${row.effort}: hashes, patch, and ${row.verification.passed}/${row.verification.total} checks`);

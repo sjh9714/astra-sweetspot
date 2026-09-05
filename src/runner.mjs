@@ -54,7 +54,7 @@ export async function runTrial({id, model, effort, timeout = 180}) {
   const hooksDirectory = join(directory, 'empty-hooks');
   await mkdir(hooksDirectory);
   await cp(join(root, 'fixtures', id), workspace, {recursive: true});
-  const git = args => execute('git', args, {cwd: workspace});
+  const git = args => execute('git', ['-c', 'core.autocrlf=false', ...args], {cwd: workspace});
   await git(['init', '--quiet']);
   await git(['add', '.']);
   await git(['-c', 'user.name=Sweetspot fixture', '-c', 'user.email=fixture@example.invalid', '-c', `core.hooksPath=${hooksDirectory}`, '-c', 'commit.gpgsign=false', 'commit', '--quiet', '-m', 'Pristine public fixture']);
