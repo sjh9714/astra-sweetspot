@@ -17,11 +17,17 @@ export function collectEvent(event, state) {
   if (typeof event.model === 'string') state.observedModel = event.model;
   if (event.type === 'turn.failed' || event.type === 'error') state.failed = true;
   if (event.type !== 'turn.completed') return;
-  state.completed = true;
   for (const name of ['input_tokens', 'cached_input_tokens', 'cache_write_input_tokens', 'output_tokens', 'reasoning_output_tokens']) {
     const value = event.usage?.[name];
-    if (Number.isSafeInteger(value) && value >= 0) state.usage[name] = (state.usage[name] ?? 0) + value;
+    const previous = state.completed ? state.usage[name] : 0;
+    // A partial sum must never become a complete total after a later valid event.
+    if (Number.isSafeInteger(previous) && previous >= 0 && Number.isSafeInteger(value) && value >= 0 && Number.isSafeInteger(previous + value)) {
+      state.usage[name] = previous + value;
+    } else {
+      state.usage[name] = null;
+    }
   }
+  state.completed = true;
 }
 
 async function codexCommand() {

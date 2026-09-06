@@ -39,6 +39,8 @@ Two historical [p-retry bugs](docs/METHODOLOGY.md#tasks-and-grading), four model
 
 **v0.1.1 telemetry correction:** the JSON receipts now also retain the CLI's reported reasoning-token subset and cache-write tokens. These fields were recovered from the eight original usage events; no trial was rerun. [See the correction and evidence](docs/METHODOLOGY.md#usage-field-correction).
 
+**v0.1.2 aggregation fix:** if any completed turn omits a usage counter or reports an invalid value, that run's counter stays `null` instead of showing a partial sum. Explicit zero remains zero. The eight bundled runs each have one complete usage event, so their results are unchanged. [Details and regression cases](docs/METHODOLOGY.md#incomplete-usage-totals).
+
 ## Reproduce one trial
 
 ```sh
